@@ -21,17 +21,21 @@ The following software needs to be installed:
 
 ## Quickstart
 Clone the git:
+
     git clone https://github.com/jtwiefel/doc_dialog
 
 Run the LLM:
+
     cd doc_dialog
     docker/scripts/start_llm.sh
 
 Run the GUI:
+
     cd docker/scripts
     ./start_gui.sh
 
 Open the Browser and go to:
+
     http://localhost:7860
 
 Upload some PDFs by navigating to "Dokumente Verwalten" and drop the PDfs into the Dropzone.
