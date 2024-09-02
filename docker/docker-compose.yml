@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  doc_dialog_ubuntu_gpu_base: 
+    image: doc_dialog_ubuntu_gpu_base:latest
+    volumes: 
+      - ../:/workspace
+      - ../volumes/tmp-volume/:/tmp
+    build:
+      context: ./..
+      dockerfile: docker/gpu_devel.Dockerfile
+    stdin_open: true
+    tty: true
+    #gpu stuff
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    profiles: [ "doc_dialog_ubuntu_gpu_base"]
+    environment:
+      - HOST_HOSTNAME=${HOST_HOSTNAME}
+    entrypoint: $ENTRYPOINT
+
+    networks:
+      - doc_dialog_network  
+  doc_dialog_llm: 
+    extends: doc_dialog_ubuntu_gpu_base
+    hostname: llm
+    ports:
+    - 7860:7860
+    profiles: [ "doc_dialog_llm" , "doc_dialog_all"]
+ 
+
+networks:
+  doc_dialog_network:
+    driver: bridge  
+
