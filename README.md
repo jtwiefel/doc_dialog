@@ -1,3 +1,5 @@
+![logo_doc_dialog](res/logo_doc_dialog.png)
+
 # DocDialog
 DocDialog is a *Retrieval Augmented Generation* system for German, focussed on privacy and independence from Cloud providers.
 It exclusively uses open source AI models, that can be run on local hardware (on premise). DocDialog has an GUI, where the user
@@ -51,3 +53,6 @@ below "Antwort". Note that the answer may not be correct and the processing time
 ## License
 DocDialog has a AGPLv3 license. This means, you cannot use it for commercial applications without providing your source code, not even on servers.
 If you want to use it in commercial applications, please write me an email: johannes.twiefel@uni-hamburg.de
+
+## Supported by
+![PTF Logo](res/PrototypeFund-P-Logo.png) ![BMBF Logo English](res/internet_in_farbe_en.jpeg) ![BMBF Logo German](res/internet_in_farbe_de.jpeg)
