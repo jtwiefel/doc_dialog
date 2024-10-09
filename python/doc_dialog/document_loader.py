@@ -166,7 +166,7 @@ class DocumentLoader:
         """        
         texts = documents
         db = FAISS.from_documents(texts, self.embedding_model)
-        db.save_local(self.faiss_volume_path )
+        db.save_local(self.faiss_volume_path)
     
 
 

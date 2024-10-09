@@ -28,7 +28,7 @@ RUN apt install -y telnet
 WORKDIR /workspace/python
 COPY ../python/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-RUN pip install flash-attn --no-build-isolation
+RUN pip install flash-attn==2.6.3 --no-build-isolation
 #RUN CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.55
 #COPY ../python/requirements_trainer_whisper_tiny.txt requirements_trainer_whisper_tiny.txt
 #RUN pip install -r requirements_trainer_whisper_tiny.txt
